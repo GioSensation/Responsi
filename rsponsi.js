@@ -73,6 +73,8 @@ var rsponsi = {
 				imgEl.src = getRsponsiSrc(el);
 				imgEl.alt = getRsponsiAlt(el);
 				el.appendChild(imgEl);
+				// Removing the rsponsi class allows us to call the function again after the first call, for example if we want to create rsponsi elements dynamically.
+				el.classList.remove('rsponsi-img');
 			}
 		});
 		
@@ -81,6 +83,8 @@ var rsponsi = {
 		[].forEach.call(rsponsiBgImgs, function(el) {
 			var imgSrc = getRsponsiSrc(el);
 			el.style.backgroundImage = "url(" + imgSrc + ")";
+			// Removing the rsponsi class allows us to call the function again after the first call, for example if we want to create rsponsi elements dynamically.
+			el.classList.remove('rsponsi-bg-img');
 		});
 	}
 };
