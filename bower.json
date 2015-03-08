@@ -1,0 +1,22 @@
+{
+	"name": "rsponsi",
+	"description": "Making responsive and retina-ready images easy, lightweight and asynchronous.",
+	"version": "0.1.0",
+	"main": [
+		"./rsponsi.js",
+		"./rsponsi-min.js"
+	],
+	"ignore": [
+		"config.codekit"
+	],
+	"keywords": [
+		"responsive images",
+		"retina",
+		"viewport"
+	],
+	"homepage": "",
+	"authors": [
+		{ "name": "Emanuele Feliziani", "email": "emanuele@gravida.pro", "homepage": "http://gravida.pro" }
+	],
+	"license": "MIT"
+}
