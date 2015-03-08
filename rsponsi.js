@@ -54,15 +54,24 @@ var rsponsi = {
 			return imgSrc;
 		}
 		
+		function getRsponsiAlt(el) {
+			var altValue;
+			if (el.hasAttribute('data-rsponsi-alt')) {
+				altValue = el.getAttribute('data-rsponsi-alt');
+			} else {
+				altValue = document.title;
+			}
+			return altValue;
+		}
+		
 		// Get rsponsi elements and loop through them, then get attributes, create the image element and append it.
 		var rsponsiImgs = document.querySelectorAll('.rsponsi-img');
 		[].forEach.call(rsponsiImgs, function(el) {
 			if (getRsponsiSrc(el)) {
 				// If the alt attribute is not defined, we will set it to an empty string.
-				var imgAlt = el.getAttribute('data-rsponsi-alt') || '';
 				var imgEl = new Image();
 				imgEl.src = getRsponsiSrc(el);
-				imgEl.alt = imgAlt;
+				imgEl.alt = getRsponsiAlt(el);
 				el.appendChild(imgEl);
 			}
 		});
