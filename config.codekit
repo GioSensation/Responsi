@@ -23,23 +23,23 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/rsponsi-min.js": {
+	"\/responsi-min.js": {
 		"fileType": 64,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/rsponsi-min.js",
-		"outputAbbreviatedPath": "\/min\/rsponsi-min-min.js",
+		"inputAbbreviatedPath": "\/responsi-min.js",
+		"outputAbbreviatedPath": "\/min\/responsi-min-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
-	"\/rsponsi.js": {
+	"\/responsi.js": {
 		"fileType": 64,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/rsponsi.js",
-		"outputAbbreviatedPath": "\/rsponsi-min.js",
+		"inputAbbreviatedPath": "\/responsi.js",
+		"outputAbbreviatedPath": "\/responsi-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 1,
 		"outputStyle": 1,
@@ -53,7 +53,7 @@
 	},
 "projectAttributes": {
 	"bowerAbbreviatedPath": "",
-	"displayValue": "rsponsi",
+	"displayValue": "responsi",
 	"displayValueWasSetByUser": 0,
 	"iconImageName": "globe_darkGray"
 	},

@@ -1,10 +1,10 @@
 {
-	"name": "rsponsi",
+	"name": "responsi",
 	"description": "Making responsive and retina-ready images easy, lightweight and asynchronous.",
 	"version": "0.1.0",
 	"main": [
-		"./rsponsi.js",
-		"./rsponsi-min.js"
+		"./responsi.js",
+		"./responsi-min.js"
 	],
 	"ignore": [
 		"config.codekit",

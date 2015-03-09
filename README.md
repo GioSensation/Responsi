@@ -1,6 +1,6 @@
-# Rsponsi
+# Responsi
 
-Rsponsi makes responsive and retina-ready image management easy, lightweight and asynchronous.
+Responsi makes responsive and retina-ready image management easy, lightweight and asynchronous.
 
 ## Advantages
 
@@ -10,27 +10,27 @@ Rsponsi makes responsive and retina-ready image management easy, lightweight and
 - **Lightweight**: less than 1k minified, serve it gzipped and it's even better
 - **Self contained**: no dependency whatsoever
 - **Cross browser**: works everywhere, with an simple fallback even when js is disabled
-- **Asynchronous**: you can load images after the `DOMContentLoaded` event, or even create rsponsi elements dynamically
+- **Asynchronous**: you can load images after the `DOMContentLoaded` event, or even create responsi elements dynamically
 
 ## How do you use it
 
-Did I say dead simple? Yep, dead simple indeed. This is your rsponsi element:
+Did I say dead simple? Yep, dead simple indeed. This is your responsi element:
 
-    <span class="rsponsi-img" data-rsponsi-large="large.jpg" data-rsponsi-medium="medium.jpg" data-rsponsi-small="small.jpg" data-rsponsi-alt="This is the alt test"></span>
+    <span class="responsi-img" data-responsi-large="large.jpg" data-responsi-medium="medium.jpg" data-responsi-small="small.jpg" data-responsi-alt="This is the alt test"></span>
 
-You can use most elements as rsponsi elements, but you might want to use `span`s for images and `div`s for background elements for their respective `inline` and `block` nature.
+You can use most elements as responsi elements, but you might want to use `span`s for images and `div`s for background elements for their respective `inline` and `block` nature.
 
-Rsponsi tries to be rather forgiving in the declaration. If the `data-rsponsi-<size>` is not available, rsponsi will look for other sizes starting from the largest.
+Responsi tries to be rather forgiving in the declaration. If the `data-responsi-<size>` is not available, responsi will look for other sizes starting from the largest.
 
-The `data-rsponsi-alt` always tries to come up with something. If you don't set it, rsponsi will take the document `<title>` tag. Please, note that even though this is good for SEO, it might be pretty bad for accessibility, so use it sparingly and always declare an alt attribute when you can. If you want to set an empty alt attribute (see [decorative images](http://en.wikipedia.org/wiki/Alt_attribute#Decorative_images "Decorative images and alt attributes on Wikipedia")), set `data-rsponsi-alt` to an empty string.
+The `data-responsi-alt` always tries to come up with something. If you don't set it, responsi will take the document `<title>` tag. Please, note that even though this is good for SEO, it might be pretty bad for accessibility, so use it sparingly and always declare an alt attribute when you can. If you want to set an empty alt attribute (see [decorative images](http://en.wikipedia.org/wiki/Alt_attribute#Decorative_images "Decorative images and alt attributes on Wikipedia")), set `data-responsi-alt` to an empty string.
 
 And here you fire the function: 
 
     document.addEventListener('DOMContentLoaded', function() {
-    	rsponsi.init();
+    	responsi.init();
     }, false);
 
-You can also pass a configuration object as a parameter to the `rsponsi.init()` function. You can figure out what you need to pass to achieve your goal by looking into the source code, it's pretty well commented. More on the default choice below. Here is the default configuration:
+You can also pass a configuration object as a parameter to the `responsi.init()` function. You can figure out what you need to pass to achieve your goal by looking into the source code, it's pretty well commented. More on the default choice below. Here is the default configuration:
 
     defaultConfig = {
     	phones	: 480,
@@ -41,14 +41,14 @@ You can also pass a configuration object as a parameter to the `rsponsi.init()` 
 
 And as an icing on the cake, you have these two helper properties that might come in handy:
 
-    rsponsi.viewport // contains the viewport width, shorthand for window.document.documentElement.clientWidth
-    rsponsi.dpi // contains the dpi, shorthand for window.devicePixelRatio (assumes 1 if devicePixelRatio is not supported)
+    responsi.viewport // contains the viewport width, shorthand for window.document.documentElement.clientWidth
+    responsi.dpi // contains the dpi, shorthand for window.devicePixelRatio (assumes 1 if devicePixelRatio is not supported)
 
 ### Fallback when JavaScript is disabled
 
 You can very easily specify a fallback for the crazy nerd that browse the interwebs with almighty JavaScript disabled. Here is your solution:
 
-    <span class="rsponsi-img" data-rsponsi-large="large.jpg" data-rsponsi-medium="medium.jpg" data-rsponsi-small="small.jpg" data-rsponsi-alt="This is the alt test">
+    <span class="responsi-img" data-responsi-large="large.jpg" data-responsi-medium="medium.jpg" data-responsi-small="small.jpg" data-responsi-alt="This is the alt test">
     	<noscript><img src="large.jpg" alt="Some text" /></noscript>
     </span>
 
@@ -66,15 +66,15 @@ So, we have small, medium and large. That's it. You then decide the size you nee
 
 ### So, you aren't into picture and srcset?
 
-I tried, gee, I tried. The spec is simply crazy. Picture and srcset will certainly cover a lot more possibilities than rsponsi, but if I need the support of a NASA engineer to display an humble image to my user, something must be wrong.
+I tried, gee, I tried. The spec is simply crazy. Picture and srcset will certainly cover a lot more possibilities than responsi, but if I need the support of a NASA engineer to display an humble image to my user, something must be wrong.
 
-Support is still highly insufficient, and the polyfill is immensely heavier than my humble rsponsi. Rsponsi addresses 90% of use cases with ease. Those who need more control, please go ahead and use other solutions.
+Support is still highly insufficient, and the polyfill is immensely heavier than my humble responsi. Responsi addresses 90% of use cases with ease. Those who need more control, please go ahead and use other solutions.
 
 Finally, Picture will certainly become my first choice when browser support get widespread and most importantly when browsers decide to support more advanced features such as image choice based on network quality and user preferences. This isn't yet implemented anywhere and it shouldn't even come too soon, as far as I know.
 
-## Rsponsi on Bower!
+## Responsi on Bower!
 
-Rsponsi can also be installed via Bower.
+Responsi can also be installed via Bower.
 
 **Happy responsive coding!**
 
