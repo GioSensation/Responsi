@@ -8,8 +8,8 @@ var rsponsi = {
 			dpi = this.dpi,
 			rsponsiSize = 'large',
 			defaultConfig = {
-				phones	: 481,
-				tabs	: 767,
+				phones	: 480,
+				tabs	: 768,
 				laps	: 1200,
 				desks	: 1900
 			};
@@ -18,18 +18,18 @@ var rsponsi = {
 		
 		/***************** SMALL *****************/
 		if (
-			viewport < rsponsiConfig.phones /* 481 */ // smartphones
+			viewport <= rsponsiConfig.phones /* 480 */ // all smartphones, regardless of dpi
 			||
-			viewport < rsponsiConfig.tabs /* 767 */ && dpi < 1.5 // regular dpi tablets and small computers
+			viewport < rsponsiConfig.tabs /* 768 */ && dpi < 1.5 // up to regular dpi phablets and small tablets (no iPad)
 			) {
 				rsponsiSize = 'small';
 			}
 		
 		/***************** MEDIUM *****************/
 		if (
-			viewport >= rsponsiConfig.phones /* 481 */ && viewport < rsponsiConfig.laps /* 1200 */ && dpi > 1.5 // hidpi tablets
+			viewport > rsponsiConfig.phones /* 480 */ && viewport < rsponsiConfig.laps /* 1200 */ && dpi > 1.5 // hidpi phablets, tablets and hidpi small computers (dunno whether they even exist)
 			||
-			viewport >= rsponsiConfig.tabs /* 767 */ && viewport < rsponsiConfig.desks /* 1900 */ && dpi < 1.5 // standard laptops & regular desktop
+			viewport >= rsponsiConfig.tabs /* 768 */ && viewport < rsponsiConfig.desks /* 1900 */ && dpi < 1.5 // regular tablets, laptops & desktop
 			) {
 				rsponsiSize = 'medium';
 			}
