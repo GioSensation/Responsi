@@ -8,7 +8,7 @@ Responsi makes **responsive and retina-ready** image management easy, lightweigh
 - **Imgs and bgs**: one solution for both `<img>` and css `background-image`
 - **Art directing**: you can choose different files for different viewports, like in the `<picture>` element
 - **Forgiving**: Responsi will try to come up with something even if you skip some declarations
-- **Lightweight**: less than 1k minified, serve it gzipped and it's like one bit and a half
+- **Lightweight**: barely 1k minified, serve it gzipped and it's like one bit and a half
 - **Self contained**: no dependency whatsoever
 - **Cross browser**: works everywhere, with an simple fallback even when js is disabled
 - **Asynchronous**: you can load images after the `DOMContentLoaded` event, or even create responsi elements dynamically
