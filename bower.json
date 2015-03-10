@@ -1,18 +1,22 @@
 {
 	"name": "responsi.js",
 	"description": "Making responsive and retina-ready images easy, lightweight and asynchronous.",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"main": [
 		"./responsi.js",
 		"./responsi-min.js"
 	],
 	"ignore": [
 		"config.codekit",
-		"index.html"
+		"LICENSE.txt",
+		"bower.json"
 	],
 	"keywords": [
+		"responsi",
+		"responsive",
 		"responsive images",
 		"retina",
+		"mobile friendly",
 		"viewport"
 	],
 	"homepage": "https://github.com/GioSensation/responsi",
