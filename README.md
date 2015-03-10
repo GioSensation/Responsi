@@ -74,7 +74,7 @@ Finally, Picture will certainly become my first choice when browser support get 
 
 ## Responsi on Bower!
 
-Responsi can also be installed via Bower.
+Responsi can also be installed via [Bower](http://http://bower.io "A package manager for the web").
 
 **Happy responsive coding!**
 
