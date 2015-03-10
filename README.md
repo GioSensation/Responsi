@@ -17,7 +17,9 @@ Responsi makes **responsive and retina-ready** image management easy, lightweigh
 
 Did I say dead simple? Yep, dead simple indeed. You can specify three images for small, medium and large screens/dpi using the `data-responsi-<size>` attribute. This is your responsi element:
 
-    <span class="responsi-img" data-responsi-large="large.jpg" data-responsi-medium="medium.jpg" data-responsi-small="small.jpg" data-responsi-alt="This is the alt test"></span>
+```html
+<span class="responsi-img" data-responsi-large="large.jpg" data-responsi-medium="medium.jpg" data-responsi-small="small.jpg" data-responsi-alt="This is the alt test"></span>
+```
 
 You can use most elements as responsi elements, but you might want to use `span`s for images and `div`s for background elements for their respective `inline` and `block` nature.
 
@@ -25,20 +27,24 @@ For `<img>`s you can also specify an `alt` attribute using `data-responsi-alt`.
 
 And here you fire the function: 
 
-    document.addEventListener('DOMContentLoaded', function() {
-    	responsi.init();
-    }, false);
+```javascript
+document.addEventListener('DOMContentLoaded', function() {
+	responsi.init();
+}, false);
+```
 
 ### Configuration
 
 You can pass a configuration object as a parameter to the `responsi.init()` function. You can figure out what you need to pass to achieve your goal by looking into the source code, it's pretty well commented. More on the default choice below. Here is the default configuration:
 
-    defaultConfig = {
-    	phones	: 480,
-    	tabs	: 768,
-    	laps	: 1200,
-    	desks	: 1900
-    };
+```javascript
+defaultConfig = {
+	phones	: 480,
+	tabs	: 768,
+	laps	: 1200,
+	desks	: 1900
+};
+```
 
 ### Forgive Me, Responsi!
 
@@ -48,16 +54,20 @@ The `data-responsi-alt` always tries to come up with something. If you don't set
 
 And as an icing on the cake, you have these two helper properties that might come in handy:
 
-    responsi.viewport // contains the viewport width, shorthand for document.documentElement.clientWidth
-    responsi.dpi // contains the dpi, shorthand for window.devicePixelRatio (assumes 1 if devicePixelRatio is not supported)
+```javascript
+responsi.viewport // contains the viewport width, shorthand for document.documentElement.clientWidth
+responsi.dpi // contains the dpi, shorthand for window.devicePixelRatio (assumes 1 if devicePixelRatio is not supported)
+```
 
 ### Fallback when JavaScript is Disabled
 
 You can very easily specify a fallback for the crazy nerds that browse the interwebs with almighty JavaScript disabled. Here is your solution:
 
-    <span class="responsi-img" data-responsi-large="large.jpg" data-responsi-medium="medium.jpg" data-responsi-small="small.jpg" data-responsi-alt="This is the alt test">
-    	<noscript><img src="large.jpg" alt="Some text" /></noscript>
-    </span>
+```html
+<span class="responsi-img" data-responsi-large="large.jpg" data-responsi-medium="medium.jpg" data-responsi-small="small.jpg" data-responsi-alt="This is the alt test">
+	<noscript><img src="large.jpg" alt="Some text" /></noscript>
+</span>
+```
 
 Fallbacks for `background-image` can be set via css.
 
