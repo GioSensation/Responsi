@@ -1,3 +1,11 @@
+/**
+ * @preserve Responsi – Making responsive and retina-ready images easy, lightweight and asynchronous.
+ * @version 0.1.1
+ * @author Emanuele Feliziani – emanuele@gravida.pro – http://gravida.pro
+ * @homepage https://github.com/GioSensation/responsi
+ * @license MIT License
+ */
+
 var responsi = {
 	// We set viewport and dpi at the object level so they can be easily accessed outside responsi. It's just a helper. I know I will use them. Note: I couldn't find the browser support for devicePixelRatio, so I just throw a fallback in case that fails.
 	viewport : document.documentElement.clientWidth,
