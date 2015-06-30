@@ -59,19 +59,19 @@ var responsi = {
 
 		/***************** RSPONSI MAGIC HAPPENS HERE *****************/
 		// Get the source URI.
-		function getResponsiSrc(el) {
+		function getResponsiSrc( el ) {
 			// If the element has the attribute of the desired size, get that size URI, otherwise try other sizes. A loop would have been more elegant, but this should be faster.
-			var imgSrc = el.getAttribute('data-responsi-' + responsiSize) ||
-						 el.getAttribute('data-responsi-large') ||
-						 el.getAttribute('data-responsi-medium') ||
-						 el.getAttribute('data-responsi-small');
+			var imgSrc = el.getAttribute( 'data-responsi-' + responsiSize ) ||
+						 el.getAttribute( 'data-responsi-large' ) ||
+						 el.getAttribute( 'data-responsi-medium' ) ||
+						 el.getAttribute( 'data-responsi-small' );
 			return imgSrc;
 		}
 
-		function getResponsiAlt(el) {
+		function getResponsiAlt( el ) {
 			var altValue;
-			if (el.hasAttribute('data-responsi-alt')) {
-				altValue = el.getAttribute('data-responsi-alt');
+			if ( el.hasAttribute( 'data-responsi-alt' ) ) {
+				altValue = el.getAttribute( 'data-responsi-alt' );
 			} else {
 				altValue = document.title;
 			}
@@ -79,26 +79,26 @@ var responsi = {
 		}
 
 		// Get responsi elements and loop through them, then get attributes, create the image element and append it.
-		var responsiImgs = document.querySelectorAll('.responsi-img');
-		[].forEach.call(responsiImgs, function(el) {
-			if (getResponsiSrc(el)) {
+		var responsiImgs = document.querySelectorAll( '.responsi-img' );
+		[].forEach.call(responsiImgs, function( el ) {
+			if (getResponsiSrc( el )) {
 				// If the alt attribute is not defined, we will set it to an empty string.
 				var imgEl = new Image();
-				imgEl.src = getResponsiSrc(el);
-				imgEl.alt = getResponsiAlt(el);
-				el.appendChild(imgEl);
+				imgEl.src = getResponsiSrc( el );
+				imgEl.alt = getResponsiAlt( el );
+				el.appendChild( imgEl );
 				// Removing the responsi class allows us to call the function again after the first call, for example if we want to create responsi elements dynamically.
-				el.classList.remove('responsi-img');
+				el.classList.remove( 'responsi-img' );
 			}
 		});
 
 		// Responsi logic for background images.
-		var responsiBgImgs = document.querySelectorAll('.responsi-bg-img');
-		[].forEach.call(responsiBgImgs, function(el) {
-			var imgSrc = getResponsiSrc(el);
+		var responsiBgImgs = document.querySelectorAll( '.responsi-bg-img' );
+		[].forEach.call(responsiBgImgs, function( el ) {
+			var imgSrc = getResponsiSrc( el );
 			el.style.backgroundImage = "url(" + imgSrc + ")";
 			// Removing the responsi class allows us to call the function again after the first call, for example if we want to create responsi elements dynamically.
-			el.classList.remove('responsi-bg-img');
+			el.classList.remove( 'responsi-bg-img' );
 		});
 	},
 	init : function ( responsiConfig ) {
