@@ -40,7 +40,7 @@ var responsi = {
 			}
 
 		/***************** MEDIUM *****************/
-		if (
+		else if (
 			viewport > this.phones /* 480 */ && viewport < this.laps /* 1200 */ && dpi > 1.5 // hidpi phablets, tablets and hidpi small computers (dunno whether they even exist)
 			||
 			viewport >= this.tabs /* 768 */ && viewport < this.desks /* 1900 */ && dpi < 1.5 // regular tablets, laptops & desktop
@@ -49,7 +49,7 @@ var responsi = {
 			}
 
 		/***************** LARGE *****************/
-		if (
+		else if (
 			viewport >= this.laps /* 1200 */ && dpi > 1.5 // hidpi laptops
 			||
 			viewport >= this.desks /* 1900 */ // big desktops
