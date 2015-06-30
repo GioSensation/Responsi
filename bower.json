@@ -1,7 +1,7 @@
 {
 	"name": "responsi.js",
 	"description": "Making responsive and retina-ready images easy, lightweight and asynchronous.",
-	"version": "0.1.1",
+	"version": "0.2.0",
 	"main": [
 		"./responsi.js",
 		"./responsi-min.js"
