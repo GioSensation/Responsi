@@ -1,6 +1,6 @@
 /**
  * @preserve Responsi – Making responsive and retina-ready images easy, lightweight and asynchronous.
- * @version 0.1.1
+ * @version 0.2.0
  * @author Emanuele Feliziani – emanuele@gravida.pro – http://gravida.pro
  * @homepage https://github.com/GioSensation/responsi
  * @license MIT License

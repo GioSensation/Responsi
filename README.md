@@ -6,11 +6,11 @@ Responsi makes **responsive and retina-ready** image management easy, lightweigh
 
 - **Dead simple**: it's easy to use and the implementation is brutally simple
 - **Imgs and bgs**: one solution for both `<img>` and css `background-image`
-- **Art directing**: you can choose different files for different viewports, like in the `<picture>` element
+- **Art directing**: you can choose different files for different viewports
 - **Forgiving**: Responsi will try to come up with something even if you skip some declarations
 - **Lightweight**: barely 1k minified, serve it gzipped and it's like one bit and a half
 - **Self contained**: no dependency whatsoever
-- **Cross browser**: works everywhere, with an simple fallback even when js is disabled
+- **Cross browser**: works everywhere, with a simple fallback even when js is disabled
 - **Asynchronous**: you can load images after the `DOMContentLoaded` event, or even create responsi elements dynamically
 
 ## Assembly Instructions (or Responsi How-To)
@@ -25,7 +25,7 @@ You can use most elements as responsi elements, but you might want to use `span`
 
 For `<img>`s you can also specify an `alt` attribute using `data-responsi-alt`.
 
-And here you fire the function: 
+And here you fire the function:
 
 ```javascript
 document.addEventListener('DOMContentLoaded', function() {
@@ -46,18 +46,26 @@ defaultConfig = {
 };
 ```
 
+And as an icing on the cake, you have a bunch of helper properties that might come in handy:
+
+```javascript
+responsi.viewport // contains the viewport width, shorthand for document.documentElement.clientWidth
+responsi.dpi // contains the dpi, shorthand for window.devicePixelRatio (assumes 1 if devicePixelRatio is not supported)
+responsi.phones // contains the breakpoint for phones
+responsi.tabs // contains the breakpoint for tabs
+responsi.laps // contains the breakpoint for laps
+responsi.desks // contains the breakpoint for desks
+```
+
+### Fire responsi after the initial `init()`
+
+Adding responsi elements dynamically? Great, then just call `responsi.fire()` to have them working. This allows you to fire the function without the need to specify configuration parameters again.
+
 ### Forgive Me, Responsi!
 
 Responsi tries to be rather forgiving in the declaration. If the `data-responsi-<size>` is not available, responsi will look for other sizes starting from the largest.
 
 The `data-responsi-alt` always tries to come up with something. If you don't set it, responsi will take the document `<title>` tag. Please, note that even though this is good for SEO, it might be pretty bad for accessibility, so use it sparingly and always declare an alt attribute when you can. If you want to set an empty alt attribute (see [decorative images](http://en.wikipedia.org/wiki/Alt_attribute#Decorative_images "Decorative images and alt attributes on Wikipedia")), set `data-responsi-alt` to an empty string.
-
-And as an icing on the cake, you have these two helper properties that might come in handy:
-
-```javascript
-responsi.viewport // contains the viewport width, shorthand for document.documentElement.clientWidth
-responsi.dpi // contains the dpi, shorthand for window.devicePixelRatio (assumes 1 if devicePixelRatio is not supported)
-```
 
 ### Fallback when JavaScript is Disabled
 
@@ -94,6 +102,12 @@ Finally, `<picture>` will certainly become my first choice when browser support 
 Responsi can also be installed via [Bower](http://http://bower.io "A package manager for the web"). Search for `responsi.js`.
 
 **Happy Responsive Coding!**
+
+## Changelog
+
+- **0.2.0**: This is the first important update. It adds the possibility to fire responsi after the initial init by calling `responsi.fire()` and allows to use the various breakpoints set for responsi, so that you can do something like `if ( responsi.viewport > responsi.phones )`. So cool.
+- **0.1.1**: Minor update to the Bower manifest, the readme and add an informational header to the top of the file.
+- **0.1.0**: Initial release.
 
 ## MIT License
 
